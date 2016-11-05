@@ -858,7 +858,7 @@ class ChangesSchedulerTest(TestCase):
         assert cs.tasksLaunched == 2
 
         # Decline any unused offers. Expect offer2 remains since offer1 was
-        # prefered.
+        # preferred.
         cs.decline_open_offers(driver)
         driver.declineOffer.assert_called_once_with(offer2.id)
 
